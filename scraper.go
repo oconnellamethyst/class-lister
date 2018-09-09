@@ -56,7 +56,7 @@ func getCourses(dept string) []Course {
 			timeLocStr := unfuck(e.Find(":nth-child(3)"))
 			timeLocData := timeLocRegex.FindStringSubmatch(timeLocStr)
 			if timeLocData == nil {
-				log.Println("Warning: Couldn't parse ", timeLocStr)
+				// log.Println("Warning: Couldn't parse ", timeLocStr)
 				return
 			}
 			startTime := timeLocData[1]
@@ -75,7 +75,7 @@ func getCourses(dept string) []Course {
 				Professor: instructor,
 			})
 		} else {
-			panic("TODO")
+			// panic("TODO")
 		}
 	})
 	return courses
